@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from '../components/Header';
 import AgregarEntrada from '../components/AddElement';
 import ListaEntradas from '../components/List';
@@ -10,10 +10,10 @@ const AppRouter = () => {
       <div>
         <Header />
         <div className="main-content">
-          <Switch>
+          <Routes>
             <Route component={ListaEntradas} path="/" exact={true} />
             <Route component={AgregarEntrada} path="/add" />
-          </Switch>
+          </Routes>
         </div>
       </div>
     </BrowserRouter>

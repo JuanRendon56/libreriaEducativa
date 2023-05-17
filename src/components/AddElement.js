@@ -1,9 +1,13 @@
 import React from 'react';
 import ElementForm from './ElementForm';
+import { useNavigate } from 'react-router-dom';
 
-const AddElement = () => {
+const AddElement = ({entradas, setEntradas}) => {
+  let navigate = useNavigate();
   const handleOnSubmit = (entrada) => {
-    console.log(entrada);
+    //Se añade entrada al inicio de la lista (Se puede editar para poner hasta abajo)
+    setEntradas([entrada, ...entradas]);
+    navigate('/');
   };
 
   return (

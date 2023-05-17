@@ -10,7 +10,7 @@ const Header = () => {
         <NavLink to="/" className="link" activeClassName="active" exact>
           Lista de entradas
         </NavLink>
-        <NavLink to="/add" className="link" activeClassName="active">
+        <NavLink to="/agregar" className="link" activeClassName="active">
           Añadir entrada
         </NavLink>
       </div>

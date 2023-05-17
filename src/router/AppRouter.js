@@ -11,8 +11,8 @@ const AppRouter = () => {
         <Header />
         <div className="main-content">
           <Routes>
-            <Route component={ListaEntradas} path="/" exact={true} />
-            <Route component={AgregarEntrada} path="/add" />
+            <Route element={<ListaEntradas/>} path="/" exact={true} />
+            <Route element={<AgregarEntrada/>} path="/agregar" />
           </Routes>
         </div>
       </div>

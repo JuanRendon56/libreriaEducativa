@@ -1,9 +1,11 @@
-import React from 'react';
+import ElementsContext from '../context/ElementsContext';
+import React, { useContext} from 'react';
 import _ from 'lodash';
 import Entrada from './Element';
 
-const List = ({ entradas, setEntradas }) => {
+const List = () => {
   //Elimina elementos cuyo id no sea igual al registro
+  const { entradas, setEntradas} = useContext(ElementsContext);
   const handleRemoveElement = (id) => {
     setEntradas(entradas.filter((entrada) => entrada.id !== id));
   };

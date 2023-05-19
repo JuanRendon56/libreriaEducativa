@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext} from 'react';
 import ElementForm from './ElementForm';
 import { useParams, useNavigate } from 'react-router-dom';
+import ElementsContext from '../context/ElementsContext';
 
-const EditElement = ({ entradas, setEntradas }) => {
-
+const EditElement = () => {
+    const { entradas, setEntradas } = useContext(ElementsContext);
     const { id } = useParams();
     const elementoEditar = entradas.find((entrada) => entrada.id === id);
     let navigate = useNavigate();

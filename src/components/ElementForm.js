@@ -104,7 +104,6 @@ const ElementForm = (props) => {
             type="file"
             name="docs"
             multiple
-            value={docs}
             placeholder="Ingresa las imagenes que desees"
             onChange={handleInputChange}
           />

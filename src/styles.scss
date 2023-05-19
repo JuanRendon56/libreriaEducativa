@@ -57,7 +57,7 @@ h2 {
 }
 
 .main-content {
-  width: 80%;
+  width: auto;
   margin: auto auto 100px auto;
 }
 
@@ -71,23 +71,24 @@ h2 {
   margin-bottom: 50px;
 }
 
-.book-list {
+.entrada-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
-.book {
+.entrada {
   margin: 10px;
-  width: 288px;
+  display: flex;
+  height: auto;
   overflow: hidden;
 
-  .book-title {
+  .entrada-title {
     font-weight: bold;
   }
 
-  .book-details {
+  .entrada-details {
     margin-bottom: 1rem;
 
     & > div {
@@ -164,6 +165,17 @@ button {
   color: #0e1b1e;
   font-size: 25px;
   margin-left: 10px;
+}
+
+.text-area-style {
+  display: flex;
+  font-family: Noto Sans, Helvetica, sans-serif;
+  color: #666;
+  letter-spacing: 1px;
+  height: auto;
+  width: 900px;
+  border-color: #fff;
+  
 }
 
 @media screen and (max-width: 400px) {

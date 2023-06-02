@@ -1,32 +1,21 @@
-const mysql = require('mysql');
+const express = require('express')
+const app = express()
+const mysql = require('mysql')
 
-const connection = mysql.createConnection({
+const db = mysql.createPool({
   host: 'localhost',
-  user: 'your_username',
-  password: 'your_password',
-  database: 'your_database'
+  user: 'root',
+  passwword: 'password',
+  database: 'libreriacrud'
 });
 
-connection.connect((err) => {
-  if (err) {
-    console.error('Error connecting to the database: ', err);
-    return;
-  }
-  console.log('Connected to the database');
+app.get('/', (req, res) => {
+  const sqlInsert = "INSERT INTO entradas (titulo, autor, guia, docs, date) VALUES ('TEST2', 'Juan', 'MIDMAIDAMDIASMIMDAIDAIMD', 0, 4);";
+  db.query(sqlInsert, (err, result) => {
+    res.send("Mande datos!");
+  })
 });
 
-connection.query('SELECT * FROM your_table', (err, results) => {
-  if (err) {
-    console.error('Error executing the query: ', err);
-    return;
-  }
-  console.log('Query results: ', results);
-});
-
-connection.end((err) => {
-  if (err) {
-    console.error('Error closing the database connection: ', err);
-    return;
-  }
-  console.log('Connection closed');
+app.listen(3001, ()=> {
+  console.log("Server Ejecutando");
 });

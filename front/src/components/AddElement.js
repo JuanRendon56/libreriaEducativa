@@ -15,9 +15,9 @@ const AddElement = () => {
       autor: entrada.autor, 
       guia: entrada.guia, 
       docs: 1, 
-      date: 3
+      date: entrada.date
     }).then(() => {
-      alert("Se pudo!");
+      console.log("Entrada enviada!");
     });
     navigate('/');
   };

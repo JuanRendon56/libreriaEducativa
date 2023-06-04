@@ -17,9 +17,9 @@ const [entradas, setEntradas] = useLocalStorage ('entrada', []);
         <div className="main-content">
           <ElementsContext.Provider value={{ entradas, setEntradas}}>
             <Routes>
-              <Route element={<ListaEntradas entradas={entradas} setEntradas={setEntradas} />} path="/" exact={true} />
-              <Route element={<AgregarEntrada entradas={entradas} setEntradas={setEntradas}/>} path="/agregar" />
-              <Route element={<EditElement entradas={entradas} setEntradas={setEntradas}/>} path="/editar/:id"/>
+              <Route element={<ListaEntradas/>} path="/" exact={true} />
+              <Route element={<AgregarEntrada/>} path="/agregar" />
+              <Route element={<EditElement/>} path="/editar/:id"/>
               <Route element={<Navigate to="/" replace/>} path="*"/>
             </Routes>
             </ElementsContext.Provider>

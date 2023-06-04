@@ -13,7 +13,6 @@ const List = () => {
 
   //Elimina elementos cuyo id no sea igual al registro
   const handleRemoveElement = (id) => {
-    console.log("Mi id en Front es:" + id);
     Axios.delete(`http://localhost:3001/eliminar/${id}`)
   };
  
@@ -22,7 +21,7 @@ const List = () => {
       <div className="entrada-lista">
         {!_.isEmpty(entradas) ? (
           entradas.map((entrada) => (
-            <Entrada key={entrada.id} {...entrada} handleRemoveElement={handleRemoveElement} />
+            <Entrada key={entrada.id} {...entrada} handleRemoveElement={handleRemoveElement}/>
           ))
         ) : (
           <p className="message">No hay entradas. ¡Porfavor añade tu guia!</p>

@@ -2,6 +2,7 @@ import React, { useContext} from 'react';
 import ElementForm from './ElementForm';
 import { useParams, useNavigate } from 'react-router-dom';
 import ElementsContext from '../context/ElementsContext';
+import Axios from 'axios';
 
 const EditElement = () => {
     const { entradas, setEntradas } = useContext(ElementsContext);
@@ -12,6 +13,14 @@ const EditElement = () => {
     const handleOnSubmit = (entrada) => {
         const elementosFiltrados = entradas.filter((entrada) => entrada.id !== id);
         setEntradas([entrada, ...elementosFiltrados]);
+        Axios.put("http://localhost:3001/actualizar", {
+            idAct: entrada.id,
+            tituloAct: entrada.titulo, 
+            autorAct: entrada.autor, 
+            guiaAct: entrada.guia, 
+            docsAct: 1,
+            dateAct: entrada.date
+        });
         navigate('/');
     };
     

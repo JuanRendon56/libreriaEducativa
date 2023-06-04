@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 
 const Element = ({id, titulo, autor, docs, guia, date, handleRemoveElement}) => {
     let navigate = useNavigate();
-    console.log(guia);
     return (
     <Card className="entrada">
         <Card.Body>

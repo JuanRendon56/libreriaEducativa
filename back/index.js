@@ -20,7 +20,7 @@ app.get('/obtener', (req, res) => {
   const sqlSelect = "SELECT * FROM entradas";
   db.query(sqlSelect, (err, result) => {
     res.send(result);
-  })
+  });
 });
 
 app.post('/agregar', (req, res) => {
@@ -33,7 +33,16 @@ app.post('/agregar', (req, res) => {
   const sqlInsert = "INSERT INTO entradas (titulo, autor, guia, docs, date) VALUES (?,?,?,?,?);";
   db.query(sqlInsert,  [titulo, autor, guia, docs, date], (err, result) => {
     res.send(result);
-  })
+  });
+});
+
+
+app.delete('/eliminar/:id', (req, res) => {
+  const idBorrar = req.params.id;
+  const sqlDelete = "DELETE FROM entradas WHERE id = ?";
+  db.query(sqlDelete, idBorrar, (err, result) =>{
+    if(err) console.log(err)
+  });
 });
 
 app.listen(3001, ()=> {

@@ -21,6 +21,7 @@ const AddElement = () => {
 
   return (
     <React.Fragment>
+      {/* Envia los para ser leidos por el servidor*/}
       <ElementForm handleOnSubmit={handleOnSubmit} />
     </React.Fragment>
   );

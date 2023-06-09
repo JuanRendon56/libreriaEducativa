@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+//Barra superior en todas las paginas para redireccionar.
 const Header = () => {
   return (
     <header>

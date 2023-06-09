@@ -5,6 +5,7 @@ import Entrada from './Element';
 import Axios from 'axios';
 
 const List = () => {
+  //Usa como referencia los elementos previamente creados/guardados
   const { entradas, setEntradas} = useContext(ElementsContext);
   //Obtiene entradas de la base de datos
   Axios.get("http://localhost:3001/obtener").then((response)=> {
@@ -16,6 +17,7 @@ const List = () => {
     Axios.delete(`http://localhost:3001/eliminar/${id}`)
   };
  
+  //Si existen datos, se crea una lista ordenada (base ID) de las entradas. De lo contrario, un mensaje introductorio
   return (
     <React.Fragment>
       <div className="entrada-lista">

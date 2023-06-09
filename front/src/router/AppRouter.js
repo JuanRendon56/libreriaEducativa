@@ -20,6 +20,7 @@ const [entradas, setEntradas] = useLocalStorage ('entrada', []);
           {/* Se da acceso a todas las paginas a las instancias leidas por el generador de contexto*/}
           <ElementsContext.Provider value={{ entradas, setEntradas}}>
             <Routes>
+              {/* AÑADIR QUIENES SOMOS*/}
               <Route element={<ListaEntradas/>} path="/" exact={true} />
               <Route element={<AgregarEntrada/>} path="/agregar" />
               <Route element={<EditElement/>} path="/editar/:id"/>

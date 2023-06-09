@@ -41,12 +41,14 @@ app.get('/obtener', (req, res) => {
 
 //Funcion UPDATE
 app.put('/actualizar', (req, res) => {
-  const idAct = req.body.id;
+  console.log("ENTRADA: ", req.body);
+  const idAct = req.body.idAct;
   const tituloAct = req.body.tituloAct;
   const autorAct = req.body.autorAct;
   const guiaAct = req.body.guiaAct;
   const docsAct = req.body.docsAct;
   const dateAct = req.body.dateAct;
+  console.log("Recibi: ", idAct, " titulo: ", tituloAct);
   const sqlUpdate = 
     "UPDATE entradas SET titulo = ?, autor = ?, guia = ?, docs = ?, date = ? WHERE id = ?";
   db.query(sqlUpdate, [tituloAct,autorAct,guiaAct,docsAct,dateAct,idAct], (err, result) =>{

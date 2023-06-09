@@ -7,6 +7,7 @@ import Axios from 'axios';
 const List = () => {
   //Usa como referencia los elementos previamente creados/guardados
   const { entradas, setEntradas} = useContext(ElementsContext);
+
   //Obtiene entradas de la base de datos
   Axios.get("http://localhost:3001/obtener").then((response)=> {
       setEntradas(response.data);

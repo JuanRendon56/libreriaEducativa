@@ -63,7 +63,7 @@ const ElementForm = (props) => {
       {errorMsg && <p className="errorMsg">{errorMsg}</p>}
       <Form onSubmit={handleOnSubmit}>
         <Form.Group controlId="name">
-          <Form.Label>Titulo de guia</Form.Label>
+          <Form.Label>Título de guía</Form.Label>
           <Form.Control
             className="input-control"
             type="text"
@@ -74,7 +74,7 @@ const ElementForm = (props) => {
           />
         </Form.Group>
         <Form.Group controlId="autor">
-          <Form.Label>Autor de la guia</Form.Label>
+          <Form.Label>Autor de la guía</Form.Label>
           <Form.Control
             className="input-control"
             type="text"
@@ -85,7 +85,7 @@ const ElementForm = (props) => {
           />
         </Form.Group>
         <Form.Group controlId="guia">
-          <Form.Label>Guia de pasos</Form.Label>
+          <Form.Label>Guía de pasos</Form.Label>
           <div>
             <textarea 
             className='input-control' 

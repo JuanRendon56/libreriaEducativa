@@ -6,6 +6,7 @@ import ListaEntradas from '../components/List';
 import useLocalStorage from '../hooks/useLocalStorage';
 import EditElement from '../components/EditElement';
 import ElementsContext from '../context/ElementsContext';
+import Introduction from '../components/Introduction';
 
 const AppRouter = () => {
 //Se crea una instancia basada en los datos previamente guardados de entrada (En caso de no tener internet)
@@ -20,8 +21,8 @@ const [entradas, setEntradas] = useLocalStorage ('entrada', []);
           {/* Se da acceso a todas las paginas a las instancias leidas por el generador de contexto*/}
           <ElementsContext.Provider value={{ entradas, setEntradas}}>
             <Routes>
-              {/* AÑADIR QUIENES SOMOS*/}
-              <Route element={<ListaEntradas/>} path="/" exact={true} />
+              <Route element={<Introduction/>} path= "/" />
+              <Route element={<ListaEntradas/>} path="/lista" exact={true} />
               <Route element={<AgregarEntrada/>} path="/agregar" />
               <Route element={<EditElement/>} path="/editar/:id"/>
               <Route element={<Navigate to="/" replace/>} path="*"/>

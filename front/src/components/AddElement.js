@@ -16,7 +16,7 @@ const AddElement = () => {
     }).then(() => {
       console.log("Entrada enviada!");
     });
-    navigate('/');
+    navigate('/lista');
   };
 
   return (

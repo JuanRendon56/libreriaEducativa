@@ -21,7 +21,7 @@ const EditElement = () => {
             docsAct: 1,
             dateAct: entrada.date
         });
-        navigate('/');
+        navigate('/lista');
     };
     
     return (

@@ -61,6 +61,7 @@ const ElementForm = (props) => {
   return (
     <div className="main-form">
       {errorMsg && <p className="errorMsg">{errorMsg}</p>}
+      {/* Formato en la pantalla que todo elemento debe utilizar para crear o editar una entrada.*/}
       <Form onSubmit={handleOnSubmit}>
         <Form.Group controlId="name">
           <Form.Label>Título de guía</Form.Label>

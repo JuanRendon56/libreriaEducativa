@@ -9,7 +9,7 @@ import ElementsContext from '../context/ElementsContext';
 import Introduction from '../components/Introduction';
 
 const AppRouter = () => {
-//Se crea una instancia basada en los datos previamente guardados de entrada (En caso de no tener internet)
+//Se crea una instancia basada en los datos previamente guardados de entrada (En caso de no tener acceso al servidor)
 const [entradas, setEntradas] = useLocalStorage ('entrada', []);
 
 //Redireccionador de paginas web
@@ -25,6 +25,7 @@ const [entradas, setEntradas] = useLocalStorage ('entrada', []);
               <Route element={<ListaEntradas/>} path="/lista" exact={true} />
               <Route element={<AgregarEntrada/>} path="/agregar" />
               <Route element={<EditElement/>} path="/editar/:id"/>
+              {/* En caso que se inserte una dirección no reconocida o mal escrita, se redirije a la pagina de inicio*/}
               <Route element={<Navigate to="/" replace/>} path="*"/>
             </Routes>
             </ElementsContext.Provider>

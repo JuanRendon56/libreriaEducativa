@@ -1,6 +1,6 @@
 import React from 'react';
 
-//Pagina introductioria
+//Pagina introductoria
 const Introduction = () => {
   return (
     <header>

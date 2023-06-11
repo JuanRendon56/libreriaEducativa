@@ -11,6 +11,7 @@ import AppRouter from './router/AppRouter';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.scss';
 
+//Controlador de rutas y dominios por parte de React. El proyecto se ejecuta constantemente bajo React manejado por el componente root
 ReactDOM.render(
   <AppRouter />, 
   document.getElementById('root')

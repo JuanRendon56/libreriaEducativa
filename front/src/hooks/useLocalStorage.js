@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+//Función para guardar datos locales en la computadora del usuario. Funge como "backup" en caso de no conectar.
 const useLocalStorage = (key, initialValue) => {
   const [value, setValue] = useState(() => {
     //Checa si existe un valor previamente guardado

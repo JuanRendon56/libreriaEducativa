@@ -3,6 +3,7 @@ import ElementForm from './ElementForm';
 import { useNavigate } from 'react-router-dom';
 import Axios from "axios";
 
+//Función para añadir un elemento desde el front al back
 const AddElement = () => {
   let navigate = useNavigate();
   const handleOnSubmit = (entrada) => {

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 //Esquema general de cualquier elemento.
 const Element = ({id, titulo, autor, docs, guia, date, handleRemoveElement}) => {
     let navigate = useNavigate();
-
+    //Al momento de dar click al boton Editar, se genera una copia del id del usuario actual. Para ser reutilizado por la edicion
     function editClick () {
         navigate(`/editar/${id}`);
         sessionStorage.setItem( "elementoActual", id);
